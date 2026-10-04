@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#eef4f7" />
+  <meta name="description" content="Invitación de boda de Bryan & Viviana — 17 de noviembre de 2026, Cancún." />
+  <title>Bryan & Viviana | 17.11.2026</title>
+  <link rel="icon" type="image/png" href="assets/decor/favicon.png" />
+  <link rel="preload" as="image" href="assets/images/02-transicion-carta.webp" />
+  <link rel="preload" as="image" href="assets/decor/sobre-base.png" />
+  <link rel="preload" as="audio" href="assets/audio/musica-boda.mp3" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-locked">
+  <div id="intro" class="intro" aria-label="Abrir invitación">
+    <img class="intro-flower intro-flower--left" src="assets/decor/flores-apertura.png" alt="" aria-hidden="true" />
+    <img class="intro-flower intro-flower--right" src="assets/decor/flores-apertura.png" alt="" aria-hidden="true" />
+
+    <div class="intro-copy">
+      <span class="eyebrow">Bryan &amp; Viviana</span>
+      <h1>Para quienes han sido parte<br />de nuestra historia</h1>
+      <p>Toca el sobre para abrir nuestra invitación</p>
+    </div>
+
+    <button id="openInvitation" class="envelope-button" type="button" aria-label="Abrir invitación de Bryan y Viviana">
+      <span class="envelope-stage" aria-hidden="true">
+        <img class="letter-piece" src="assets/decor/carta-interior.png" alt="" />
+        <img class="envelope-base" src="assets/decor/sobre-base.png" alt="" />
+        <img class="envelope-flap" src="assets/decor/sobre-solapa.png" alt="" />
+        <span class="seal-wrap">
+          <img class="seal-half seal-half--left" src="assets/decor/sello-bv.png" alt="" />
+          <img class="seal-half seal-half--right" src="assets/decor/sello-bv.png" alt="" />
+          <span class="seal-crack seal-crack--one"></span>
+          <span class="seal-crack seal-crack--two"></span>
+        </span>
+      </span>
+    </button>
+
+    <div class="intro-signature">17 · 11 · 2026</div>
+  </div>
+
+  <audio id="weddingAudio" preload="metadata" loop>
+    <source src="assets/audio/musica-boda.mp3" type="audio/mpeg" />
+  </audio>
+
+  <button id="audioToggle" class="audio-toggle" type="button" aria-label="Pausar música" aria-pressed="true">
+    <span class="audio-icon" aria-hidden="true">♫</span>
+    <span class="audio-label">Música</span>
+  </button>
+
+  <main id="siteContent" class="site-content" aria-hidden="true">
+    <section class="transition-hero" id="inicio">
+      <img src="assets/images/02-transicion-carta.webp" alt="Bryan y Viviana" fetchpriority="high" />
+      <div class="transition-shade"></div>
+      <div class="transition-copy reveal reveal--hero">
+        <span class="eyebrow eyebrow--light">Nuestra historia continúa</span>
+        <h2>Bryan <span>&amp;</span> Viviana</h2>
+        <p>Desliza para abrir nuestra invitación</p>
+        <div class="scroll-cue" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <section class="main-hero paper-section">
+      <div class="main-hero__photo reveal">
+        <img src="assets/images/01-portada-bryan-viviana.webp" alt="Bryan y Viviana, portada de la invitación" />
+      </div>
+      <div class="main-hero__copy reveal reveal--delay">
+        <span class="eyebrow">Tenemos algo que celebrar</span>
+        <h2>Bryan <span>&amp;</span> Viviana</h2>
+        <p class="hero-script">Nos casamos</p>
+        <div class="date-lockup">
+          <span>17</span><i></i><span>11</span><i></i><span>2026</span>
+        </div>
+        <p class="hero-place">Cancún · Quintana Roo</p>
+      </div>
+    </section>
+
+    <section class="verse-section paper-section">
+      <img class="verse-flower verse-flower--top" src="assets/decor/flores-apertura.png" alt="" aria-hidden="true" />
+      <div class="verse-card reveal">
+        <div class="mini-seal">B &amp; V</div>
+        <blockquote>
+          “Ponme como un sello sobre tu corazón, como un sello sobre tu brazo, porque el amor es tan fuerte como la muerte, y la devoción total, tan exigente como la tumba.”
+        </blockquote>
+        <cite>Cantares 8:6</cite>
+      </div>
+    </section>
+
+    <section class="countdown-section paper-section" aria-labelledby="countdownTitle">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Falta muy poco</span>
+        <h2 id="countdownTitle">Hasta nuestro día</h2>
+      </div>
+      <div id="countdown" class="countdown reveal reveal--delay" aria-live="polite">
+        <div><strong id="days">00</strong><span>Días</span></div>
+        <div><strong id="hours">00</strong><span>Horas</span></div>
+        <div><strong id="minutes">00</strong><span>Minutos</span></div>
+        <div><strong id="seconds">00</strong><span>Segundos</span></div>
+      </div>
+      <p id="countdownMessage" class="countdown-message" hidden>Hoy comienza nuestra historia para siempre</p>
+      <a class="button button--ghost reveal" href="assets/calendar/boda-bryan-viviana.ics" download>Agregar al calendario</a>
+    </section>
+
+    <section class="timeline-section paper-section" id="historia">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Desde 2012</span>
+        <h2>Nuestra historia</h2>
+        <p>Dos caminos que coincidieron muchas veces hasta convertirse en uno.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="story story--right reveal">
+          <div class="story-photo"><img loading="lazy" src="assets/images/03-historia-2012.webp" alt="Bryan y Viviana en 2012, antes de saber lo que vendría" /></div>
+          <div class="story-copy"><time>2012</time><h3>Donde todo comenzó sin que lo supiéramos</h3><p>Nos conocimos representando a Chiapas en Poomsae, durante un viaje a Campeche. Éramos dos personas tímidas, con nuestros propios amigos y nuestros propios sueños. Apenas cruzábamos algunas palabras, pero sin saberlo, nuestras historias ya habían empezado a coincidir.</p></div>
+        </article>
+
+        <article class="story story--left reveal">
+          <div class="story-photo"><img loading="lazy" src="assets/images/04-historia-2019.webp" alt="Bryan y Viviana reencontrándose en 2019" /></div>
+          <div class="story-copy"><time>2019</time><h3>El reencuentro</h3><p>Años después volvimos a encontrarnos. Vivi fue a saludarme después de una presentación y nos tomamos una foto juntos. No hubo promesas ni grandes declaraciones, solo risas, alegría por volver a vernos y una pequeña sensación de que aquel encuentro había sido diferente.</p><p class="story-note">Después, nuestros caminos volvieron a separarse… por un tiempo.</p></div>
+        </article>
+
+        <article class="story story--right reveal">
+          <div class="story-photo"><img loading="lazy" src="assets/images/05-historia-2022.webp" alt="Bryan y Viviana a finales de 2022" /></div>
+          <div class="story-copy"><time>Finales de 2022</time><h3>La vida volvió a cruzarnos</h3><p>Una lesión terminó convirtiéndose en una de las coincidencias más importantes de nuestra historia. Recordé que Vivi era fisioterapeuta y decidí escribirle buscando ayuda.</p><p>Lo que comenzó como una cita profesional se transformó en largas conversaciones, confianza y horas juntos. Poco a poco, dejamos de ser dos personas que se conocían desde hacía años para empezar a descubrirnos de verdad.</p></div>
+        </article>
+
+        <article class="story story--left reveal">
+          <div class="story-photo story-photo--landscape"><img loading="lazy" src="assets/images/06-historia-amor-en-secreto.jpg" alt="Bryan y Viviana durante los primeros días de su noviazgo" /></div>
+          <div class="story-copy"><time>27 de enero de 2023</time><h3>Nuestro pequeño secreto</h3><p>Ese día decidimos estar juntos. Durante un tiempo, nuestra relación fue solamente nuestra. Entre fotografías, mensajes, risas y momentos que todavía no compartíamos con los demás, comenzó una etapa que guardamos con especial cariño.</p></div>
+        </article>
+
+        <article class="story story--right reveal">
+          <div class="story-photo"><img loading="lazy" src="assets/images/07-historia-novios-2023.jpg" alt="Bryan y Viviana como novios en 2023" /></div>
+          <div class="story-copy"><time>2023</time><h3>Elegirnos</h3><p>Poco a poco dejamos de esconder lo que ya era evidente para nosotros: queríamos construir algo juntos.</p><p>Ya no eran solo conversaciones interminables, chocolates, cafés o encuentros inesperados. Éramos una pareja aprendiendo a conocerse, a confiar y a elegir quedarse.</p></div>
+        </article>
+
+        <article class="story story--left reveal">
+          <div class="story-photo"><img loading="lazy" src="assets/images/08-historia-familia-einar.jpg" alt="Bryan, Viviana y Einar comenzando a formar una familia" /></div>
+          <div class="story-copy"><time>2023</time><h3>Y nuestra historia se convirtió en familia</h3><p>Nuestra historia nunca fue solamente de dos. Einar llegó a ocupar un lugar esencial en todo lo que estábamos construyendo. Poco a poco dejamos de ser una pareja para empezar a sentirnos como una familia.</p><p class="story-highlight">Un día, casi sin pensarlo, Einar dijo: “adiós, papá”. Y algo cambió para siempre.</p></div>
+        </article>
+
+        <article class="story story--right reveal">
+          <div class="story-photo"><img loading="lazy" src="assets/images/09-historia-compromiso.jpg" alt="Bryan y Viviana durante la etapa de su compromiso" /></div>
+          <div class="story-copy"><time>Nuestro compromiso</time><h3>Un sí para el futuro</h3><p>Antes de comenzar una nueva etapa lejos de Chiapas, llegó una de las decisiones más importantes de nuestra historia. Bryan le pidió matrimonio a Viviana.</p><p>No sabíamos exactamente dónde nos llevaría la vida, qué ciudades conoceríamos ni cuántos nuevos comienzos tendríamos por delante. Pero sí sabíamos algo: <strong>queríamos vivirlos juntos.</strong></p></div>
+        </article>
+
+        <article class="story story--left reveal">
+          <div class="story-photo story-photo--wide"><img loading="lazy" src="assets/images/10-historia-monterrey.jpg" alt="Bryan, Viviana y Einar durante su etapa en Nuevo León" /></div>
+          <div class="story-copy"><time>Nuevo León</time><h3>Aprender a empezar de nuevo</h3><p>Nos mudamos buscando nuevas oportunidades y una vida mejor para nuestra familia. Nuevo León nos puso a prueba, pero también nos regaló recuerdos que seguimos guardando: paseos, lugares especiales, nuevas personas, sueños compartidos y momentos en los que simplemente nos sentábamos a preguntarnos qué queríamos construir juntos.</p><p>No todo salió como imaginábamos, pero incluso esa etapa terminó formando parte de quienes somos hoy.</p></div>
+        </article>
+
+        <article class="story story--right reveal">
+          <div class="story-photo"><img loading="lazy" src="assets/images/11-historia-cancun.jpg" alt="Bryan, Viviana y Einar en Cancún" /></div>
+          <div class="story-copy"><time>Cancún</time><h3>Nuestro presente</h3><p>Después de regresar a Chiapas atravesamos una de las etapas más difíciles de nuestra historia. Hubo una cirugía, incertidumbre, nuevos proyectos y muchas decisiones. Entonces apareció Cancún.</p><p>Primero llegó Bryan y, tiempo después, volvimos a estar juntos los tres. Hoy esta ciudad representa otro comienzo: nuestra familia reunida, nuevos sueños y la oportunidad de seguir construyendo la vida que tantas veces imaginamos.</p><p class="story-highlight">Y ahora, nuestro siguiente capítulo tiene fecha: 17 de noviembre de 2026.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="event-section paper-section" id="evento">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Acompáñanos</span>
+        <h2>Nuestro día</h2>
+      </div>
+      <div class="event-grid">
+        <article class="event-card reveal">
+          <span class="event-number">01</span>
+          <h3>Ceremonia</h3>
+          <p class="event-time">10:00 AM</p>
+          <p><strong>17 de noviembre de 2026</strong><br />Registro Civil · Oficialía 01 y Oficialía 02<br />Cancún, Quintana Roo</p>
+          <a class="button" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Registro+Civil+Oficial%C3%ADa+01+y+02+Canc%C3%BAn+Quintana+Roo">Cómo llegar</a>
+        </article>
+        <article class="event-card reveal reveal--delay">
+          <span class="event-number">02</span>
+          <h3>Recepción</h3>
+          <p class="event-time">11:30 AM</p>
+          <p><strong>Café con Gracia</strong><br />Tankah 69 Mza., Av. Tankah 69-1 Lote<br />77509 Cancún, Q.R.</p>
+          <a class="button" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/DCzcXDsedZQQZ7B69?g_st=ac">Cómo llegar</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing-section">
+      <img loading="lazy" src="assets/images/12-cierre-bryan-viviana.jpg" alt="Bryan y Viviana juntos" />
+      <div class="closing-overlay"></div>
+      <div class="closing-copy reveal">
+        <span class="eyebrow eyebrow--light">Gracias</span>
+        <h2>Gracias por ser parte de nuestra historia.</h2>
+        <p>A quienes han caminado junto a nosotros, han compartido nuestras alegrías, nuestros cambios y los capítulos que nos trajeron hasta aquí: gracias.</p>
+        <p>Hoy comenzamos una nueva etapa y nos hace profundamente felices poder compartir este momento con ustedes.</p>
+        <div class="closing-signature">Con amor,<br /><strong>Bryan &amp; Viviana</strong></div>
+        <div class="closing-monogram">B &amp; V</div>
+        <div class="closing-date">17 · 11 · 2026</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
